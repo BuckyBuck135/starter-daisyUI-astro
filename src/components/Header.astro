@@ -1,0 +1,20 @@
+---
+import navData from "@data/navData"
+import ThemeProvider from "./ThemeProvider.astro"
+---
+<div class="mx-2 flex-1 px-2">Astro x DaisyUI Starter Kit</div>
+
+<div class="hidden flex-none sm:block">
+    <ul class="menu menu-horizontal">
+        <!-- Navbar menu content here -->
+        {
+            navData.map(entry => (
+              <li>
+                <a href={entry.url}>{entry.key}</a>
+              </li>
+            ))
+          }
+    </ul>
+</div>
+<ThemeProvider />
+
